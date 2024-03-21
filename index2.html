@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Hello World</h1>
+<h2>My name is John Doe</h2>
+<p>I'm hosted with GitHub Pages.</p>
+
+<button> Enter1</button>
+<button onclick="alert('Hello World 1')">Enter2</button>
+
+<input type ="button" value="Enter3" onclick="alert('Hello World 3')">
+<button onmouseover="alert('Hello World 4')">Enter4</button>
+
+<button onclick="myFunction()">Enter 5</button>
+<br>
+<br>
+
+
+
+Name: <input type="text" id="name1">
+<button onclick="myFunction2()">function2</button>
+
+
+
+
+<script>
+    function myFunction() {
+        alert("Hello World 5");
+    }
+    function myFunction2() {
+        document.write("<h1 style='color:purple'> Hello World 6 </h1> <br> name1: " + document.getElementById("name1").value);
+    }
+</script>
+
+
+</body> 
+</html>

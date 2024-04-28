@@ -1,6 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 
+function UI(props) {
+  function clickhandler() {
+    alert('Button clicked');
+  }
+  
+  return <button onClick={clickhandler}> {props.text}</button>;
+    
+  }
+
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +27,8 @@ function App() {
         >
           Learn React
         </a>
+        <h1>Hello World</h1>
+        <UI text="Click me" />
       </header>
     </div>
   );

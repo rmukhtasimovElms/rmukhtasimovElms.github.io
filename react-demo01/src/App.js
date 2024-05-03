@@ -1,13 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function UI(props) {
+  const [color,setColor] = useState("");
+  
+  function changeState(e){
+    setColor(e.target.value);
+
+  }
+
+
   function clickhandler() {
-    alert('Button clicked');
+    alert(color);
+    document.body.style.backgroundColor = color;
   }
   
-  return <button onClick={clickhandler}> {props.text}</button>;
-    
+  return (<div>Enter a color: <input value={color} onChange={changeState}></input>
+  <button onClick={clickhandler}> {props.text}</button>
+  </div> );
   }
 
 
@@ -27,7 +38,9 @@ function App() {
         >
           Learn React
         </a>
+
         <h1>Hello World</h1>
+
         <UI text="Click me" />
       </header>
     </div>
